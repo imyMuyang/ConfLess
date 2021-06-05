@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: imyBuild
+name: Build
 
 on:
   push:
@@ -17,3 +17,7 @@ jobs:
       with:
         node-version: 14.x
     - run: node ./build.js
+    - name: Push
+      uses: ad-m/github-push-action@v0.6.0
+      with: 
+        github_token: $\{{ secrets.TOKEN }}
