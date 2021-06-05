@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 console.log("正在读取程序……");
 var code = fs.readFileSync("./Confless.js", "utf-8");
 console.log("正在删除注释……")
@@ -13,4 +14,5 @@ code = code.replace(/ = /g, "=");
 code = code.replace(/ == /g, "==");
 code = code.replace(/, /g, ",");
 console.log("正在写出打包代码……");
+console.log(path.resolve("./release.js"));
 fs.writeFileSync("./release.js", code);
