@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -16,6 +16,5 @@ jobs:
       - run: node ./build.js
       - run: git config user.email "xzmr123@126.com"
       - run: git config user.name "imyMuyang"
-      - run: git add release.js
-      - run: git commit
-      - run: git push
+      - run: git commit -am "#自动构建 更新压缩后代码"
+      - run: git push origin local
