@@ -4,6 +4,7 @@ on: [ push, delete, create ]
 
 jobs:
   build:
+    name: 同步到 Gitee
     runs-on: ubuntu-latest
     steps:
       - name: 同步到 Gitee
