@@ -18,3 +18,4 @@ jobs:
       - run: git config user.name "imyMuyang"
       - run: git add release.js
       - run: git commit
+      - run: git push
