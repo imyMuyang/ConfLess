@@ -14,6 +14,4 @@ jobs:
         with:
           node-version: 14.x
       - run: node ./build.js
-      - uses: actions/checkout@v2
-      - uses: fregante/setup-git-user@v1
       - run: git push
