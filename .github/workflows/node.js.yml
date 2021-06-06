@@ -14,4 +14,5 @@ jobs:
         with:
           node-version: 14.x
       - run: node ./build.js
-      - run: git push
+      - run: git add build.js
+      - run: git commit
