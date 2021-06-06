@@ -10,7 +10,7 @@ const path = require("path");
 function setConfigBase(baseLocation) {
   if (baseLocation == "") {
     try {
-      fs.rmSync(path.resolve(require.main.path, "configBase.tmp"))
+      fs.rmSync(path.resolve(require.main.path, "configBase.tmp"));
       return (true);
     } catch (error) {
       return (false)
@@ -87,7 +87,7 @@ function getConfig(configName, configItem) {
     const configValue = eval("configFile_Prased." + configItem);
     return (configValue);
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return (false);
   }
 };
@@ -105,7 +105,7 @@ function setConfig(configName, configItem, configValue, configExtension) {
   var nowExt;
   var configExtension;
   if (configExtension != "") { // 如果指定了扩展就加载用户扩展
-    nowExt = "." + configExtension
+    nowExt = "." + configExtension;
     configExtension = require(path.resolve(__dirname, "Extensions", configExtension));
   } else { // 如果没指定就直接加载本地扩展
     for (let i = 0; i < exts.length; i++) {
@@ -134,7 +134,7 @@ function setConfig(configName, configItem, configValue, configExtension) {
     }
     return (true);
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return (false);
   }
 };
