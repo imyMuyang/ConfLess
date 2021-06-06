@@ -1,4 +1,4 @@
-name: Build
+name: 代码压缩
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
       - run: git config user.email "xzmr123@126.com"
       - run: git config user.name "imyMuyang"
       - run: git add -A
-      - run: git commit -m "#自动构建 更新压缩后代码"
+      - run: git commit -m "自动构建 更新压缩代码"
       - run: git push origin local
