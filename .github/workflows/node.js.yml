@@ -17,7 +17,7 @@ jobs:
         node-version: 14.x
     - run: node ./build.js
     
-    - name: Build
+    - name: Push
     - uses: actions/checkout@v2
     - run: git config --global user.email "xzmr123@126.com"
     - run: git config --global user.name "imyMuyang"
